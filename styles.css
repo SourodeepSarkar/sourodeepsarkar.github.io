@@ -128,6 +128,191 @@ body {
 
 }
 
+/* =========================================
+LATEST RELEASE BANNER
+Fully removable/customisable
+========================================= */
+
+.release-banner {
+
+    position: relative;
+
+    width: calc(100% - 40px);
+
+    margin: 20px auto 0 auto;
+
+    padding: 20px 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    border-radius: 28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(124,140,255,0.16),
+        rgba(236,72,153,0.12)
+    );
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(24px);
+
+    overflow: hidden;
+
+    z-index: 999;
+
+}
+
+.release-banner::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.12),
+        transparent 50%
+    );
+
+    pointer-events: none;
+
+}
+
+.release-left {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.release-pill {
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    white-space: nowrap;
+
+}
+
+.release-text h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+}
+
+.release-text p {
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+}
+
+.release-actions {
+
+    display: flex;
+    gap: 14px;
+
+}
+
+.release-btn {
+
+    text-decoration: none;
+
+    padding: 14px 22px;
+
+    border-radius: 999px;
+
+    transition: 0.35s ease;
+
+    white-space: nowrap;
+
+}
+
+.release-btn:hover {
+
+    transform:
+    translateY(-3px)
+    scale(1.02);
+
+}
+
+.primary-release {
+
+    background: white;
+
+    color: black;
+
+    font-weight: 700;
+
+}
+
+.secondary-release {
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+}
+
+@media(max-width: 900px) {
+
+    .release-banner {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .release-actions {
+
+        width: 100%;
+
+    }
+
+    .release-btn {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .release-left {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+}
+
 .navbar {
 
     position: sticky;
