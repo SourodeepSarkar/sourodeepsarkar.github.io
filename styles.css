@@ -1019,9 +1019,6 @@ MUSIC PLATFORMS
     transform:
     translateY(-10px);
 
-    box-shadow:
-    0 18px 50px rgba(0,0,0,0.16);
-
 }
 
 .platform-top {
@@ -1180,9 +1177,6 @@ ABOUT
 .embed-card:hover {
 
     transform: translateY(-10px);
-
-    box-shadow:
-    0 18px 50px rgba(0,0,0,0.16);
 
 }
 
@@ -1370,9 +1364,53 @@ PROJECTS
     border-color:
     rgba(255,255,255,0.16);
 
-    box-shadow:
-    0 18px 50px rgba(0,0,0,0.16);
+}
 
+/* =========================================
+UNIFIED CARD HOVER SYSTEM
+========================================= */
+
+.platform-card,
+.glass-card,
+.social-card,
+.embed-card,
+.project-card,
+.floating-media-card,
+.floating-mini-card,
+.mini-platform-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+    transform 0.45s cubic-bezier(0.22,1,0.36,1),
+    box-shadow 0.45s cubic-bezier(0.22,1,0.36,1),
+    border-color 0.45s cubic-bezier(0.22,1,0.36,1),
+    background 0.45s cubic-bezier(0.22,1,0.36,1);
+
+    box-shadow:
+    0 8px 24px rgba(0,0,0,0.06);
+
+    will-change:
+    transform,
+    box-shadow;
+}
+
+.platform-card:hover,
+.glass-card:hover,
+.social-card:hover,
+.embed-card:hover,
+.project-card:hover,
+.floating-media-card:hover,
+.floating-mini-card:hover,
+.mini-platform-card:hover {
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 18px 50px rgba(0,0,0,0.14);
 }
 
 .project-card:hover::before {
