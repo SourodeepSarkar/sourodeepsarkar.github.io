@@ -1802,3 +1802,532 @@ RESPONSIVE
 
 }
 
+/* =========================================
+MOBILE + TABLET ADAPTIVE LAYER
+Non-destructive responsive overrides
+========================================= */
+
+/* ---------- LARGE TABLETS ---------- */
+
+@media (max-width: 1200px) {
+
+    .hero-inner {
+
+        grid-template-columns: 1fr;
+        gap: 60px;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+
+    }
+
+    .hero-media-stack {
+
+        width: 100%;
+        max-width: 720px;
+
+    }
+
+}
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        padding: 16px 5vw;
+
+    }
+
+    .navbar.scrolled {
+
+        padding: 14px 5vw;
+
+    }
+
+    .nav-links {
+
+        gap: 18px;
+
+    }
+
+    .hero-inner {
+
+        padding:
+        120px 5vw 80px;
+
+    }
+
+    .hero h1 {
+
+        font-size:
+        clamp(54px, 10vw, 90px);
+
+    }
+
+    .hero h2 {
+
+        font-size: 22px;
+
+    }
+
+    .hero-description {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+    }
+
+    .hero-buttons {
+
+        flex-wrap: wrap;
+
+    }
+
+    .floating-mini-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .music-platform-grid,
+    .projects-grid,
+    .about-grid,
+    .social-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .footer-links {
+
+        justify-content: flex-start;
+
+    }
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    body {
+
+        overflow-x: hidden;
+
+    }
+
+    .navbar {
+
+        padding: 14px 20px;
+
+    }
+
+    .navbar.scrolled {
+
+        padding: 12px 20px;
+
+    }
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+
+    }
+
+    .hero-inner {
+
+        padding:
+        110px 20px 70px;
+
+        gap: 42px;
+
+    }
+
+    .hero-badge {
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+
+        padding: 8px 14px;
+
+        margin-bottom: 22px;
+
+    }
+
+    .hero h1 {
+
+        font-size:
+        clamp(48px, 16vw, 72px);
+
+        line-height: 0.96;
+
+        margin-bottom: 18px;
+
+    }
+
+    .hero h2 {
+
+        font-size: 18px;
+
+        line-height: 1.5;
+
+    }
+
+    .hero-description {
+
+        margin-top: 22px;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 14px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 15px 20px;
+
+    }
+
+    .floating-media-card,
+    .floating-mini-card {
+
+        border-radius: 28px;
+
+    }
+
+    .spotify-card {
+
+        padding: 20px;
+
+    }
+
+    .mini-platform-card {
+
+        padding: 22px;
+
+    }
+
+    .mini-platform-card p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+    .section {
+
+        padding:
+        90px 20px;
+
+    }
+
+    .section-header {
+
+        margin-bottom: 44px;
+
+    }
+
+    .section-header h2 {
+
+        font-size:
+        clamp(34px, 10vw, 52px);
+
+        line-height: 1.08;
+
+    }
+
+    .section-label {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .glass-card,
+    .social-card,
+    .embed-card,
+    .project-card,
+    .platform-card {
+
+        padding: 24px;
+
+        border-radius: 28px;
+
+    }
+
+    .platform-card h3,
+    .project-card h3 {
+
+        font-size: 28px;
+
+    }
+
+    .platform-card p,
+    .project-card p,
+    .glass-card p,
+    .social-card p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+    .project-top {
+
+        margin-bottom: 22px;
+
+    }
+
+    .project-icon {
+
+        width: 54px;
+        height: 54px;
+
+        border-radius: 16px;
+
+        font-size: 20px;
+
+    }
+
+    .project-tags {
+
+        gap: 8px;
+
+        margin-top: 24px;
+
+    }
+
+    .project-tags span {
+
+        font-size: 12px;
+
+        padding: 8px 12px;
+
+    }
+
+    .timeline {
+
+        padding-left: 26px;
+
+        margin-left: 4px;
+
+    }
+
+    .timeline-dot {
+
+        left: -35px;
+
+        width: 12px;
+        height: 12px;
+
+    }
+
+    pre {
+
+        padding: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+    .release-banner {
+
+        width: calc(100% - 24px);
+
+        margin-top: 14px;
+
+        padding: 18px;
+
+        gap: 20px;
+
+        border-radius: 22px;
+
+    }
+
+    .release-left {
+
+        gap: 14px;
+
+    }
+
+    .release-text h3 {
+
+        font-size: 16px;
+
+    }
+
+    .release-text p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+    }
+
+    .release-actions {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+    .release-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+    .footer {
+
+        padding:
+        70px 20px 40px;
+
+    }
+
+    .footer-description {
+
+        font-size: 14px;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+    }
+
+    .page-blur {
+
+        width: 340px;
+        height: 340px;
+
+        filter: blur(90px);
+
+        opacity: 0.16;
+
+    }
+
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .hero-inner {
+
+        padding-top: 100px;
+
+    }
+
+    .hero h1 {
+
+        font-size:
+        clamp(42px, 15vw, 58px);
+
+    }
+
+    .hero h2 {
+
+        font-size: 16px;
+
+    }
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+    .platform-card,
+    .project-card,
+    .glass-card,
+    .social-card {
+
+        padding: 20px;
+
+    }
+
+    .platform-card h3,
+    .project-card h3 {
+
+        font-size: 24px;
+
+    }
+
+    .platform-top i {
+
+        font-size: 28px;
+
+    }
+
+    .release-pill {
+
+        font-size: 10px;
+
+        padding: 8px 12px;
+
+    }
+
+    .release-text h3 {
+
+        font-size: 15px;
+
+    }
+
+    .section {
+
+        padding:
+        80px 18px;
+
+    }
+
+}
