@@ -1803,24 +1803,26 @@ RESPONSIVE
 }
 
 /* =========================================
-MOBILE + TABLET ADAPTIVE LAYER
-Non-destructive responsive overrides
+MOBILE + TABLET OPTIMIZATION
+DOES NOT ALTER DESKTOP
 ========================================= */
 
-/* ---------- LARGE TABLETS ---------- */
-
-@media (max-width: 1200px) {
-
-    .hero-inner {
-
-        grid-template-columns: 1fr;
-        gap: 60px;
-
-    }
+@media (max-width: 1100px) {
 
     .hero {
 
         min-height: auto;
+        padding-bottom: 60px;
+
+    }
+
+    .hero-inner {
+
+        grid-template-columns: 1fr;
+        gap: 48px;
+
+        padding:
+        120px 6vw 80px;
 
     }
 
@@ -1829,11 +1831,35 @@ Non-destructive responsive overrides
         width: 100%;
         max-width: 720px;
 
+        margin: 0 auto;
+
+    }
+
+    .floating-media-card,
+    .floating-mini-card {
+
+        width: 100%;
+
+    }
+
+    .cinematic-slider {
+
+        height: 100%;
+
+    }
+
+    .slide {
+
+        background-position: center center;
+        background-size: cover;
+
     }
 
 }
 
-/* ---------- TABLETS ---------- */
+/* =========================================
+TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -1843,42 +1869,30 @@ Non-destructive responsive overrides
 
     }
 
-    .navbar.scrolled {
-
-        padding: 14px 5vw;
-
-    }
-
-    .nav-links {
-
-        gap: 18px;
-
-    }
-
     .hero-inner {
 
         padding:
-        120px 5vw 80px;
+        110px 5vw 70px;
 
     }
 
     .hero h1 {
 
-        font-size:
-        clamp(54px, 10vw, 90px);
+        font-size: clamp(56px, 11vw, 82px);
+        line-height: 0.95;
 
     }
 
     .hero h2 {
 
         font-size: 22px;
+        line-height: 1.45;
 
     }
 
     .hero-description {
 
         font-size: 16px;
-
         line-height: 1.8;
 
     }
@@ -1889,9 +1903,10 @@ Non-destructive responsive overrides
 
     }
 
-    .floating-mini-grid {
+    .primary-btn,
+    .secondary-btn {
 
-        grid-template-columns: 1fr;
+        width: fit-content;
 
     }
 
@@ -1904,23 +1919,45 @@ Non-destructive responsive overrides
 
     }
 
-    .footer-grid {
+    .platform-card,
+    .project-card,
+    .glass-card,
+    .social-card {
 
-        grid-template-columns: 1fr;
-
-        gap: 40px;
+        padding: 28px;
 
     }
 
-    .footer-links {
+    .section {
 
-        justify-content: flex-start;
+        padding: 100px 5vw;
+
+    }
+
+    .section-header {
+
+        margin-bottom: 50px;
+
+    }
+
+    .section-header h2 {
+
+        font-size: clamp(34px, 7vw, 52px);
+
+    }
+
+    .footer {
+
+        padding:
+        80px 5vw 50px;
 
     }
 
 }
 
-/* ---------- MOBILE ---------- */
+/* =========================================
+MOBILE
+========================================= */
 
 @media (max-width: 700px) {
 
@@ -1932,34 +1969,28 @@ Non-destructive responsive overrides
 
     .navbar {
 
-        padding: 14px 20px;
+        padding: 14px 5vw;
 
     }
 
-    .navbar.scrolled {
+    .nav-left {
 
-        padding: 12px 20px;
-
-    }
-
-    .nav-links {
-
-        display: none;
+        font-size: 15px;
 
     }
 
     .hero {
 
-        min-height: auto;
+        align-items: flex-start;
 
     }
 
     .hero-inner {
 
         padding:
-        110px 20px 70px;
+        100px 5vw 60px;
 
-        gap: 42px;
+        gap: 36px;
 
     }
 
@@ -1969,7 +2000,7 @@ Non-destructive responsive overrides
 
         letter-spacing: 1px;
 
-        padding: 8px 14px;
+        padding: 9px 14px;
 
         margin-bottom: 22px;
 
@@ -1977,12 +2008,13 @@ Non-destructive responsive overrides
 
     .hero h1 {
 
-        font-size:
-        clamp(48px, 16vw, 72px);
+        font-size: clamp(46px, 16vw, 64px);
 
-        line-height: 0.96;
+        line-height: 0.92;
 
         margin-bottom: 18px;
+
+        word-break: break-word;
 
     }
 
@@ -2021,20 +2053,49 @@ Non-destructive responsive overrides
 
         text-align: center;
 
-        padding: 15px 20px;
+        padding: 15px 18px;
 
     }
 
-    .floating-media-card,
-    .floating-mini-card {
+    .cinematic-slider {
 
-        border-radius: 28px;
+        height: 100%;
+
+    }
+
+    .slide {
+
+        background-position: center center;
+        background-size: cover;
+
+    }
+
+    .slider-overlay {
+
+        background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.92)
+        );
+
+    }
+
+    .hero-media-stack {
+
+        gap: 18px;
+
+    }
+
+    .floating-mini-grid {
+
+        grid-template-columns: 1fr;
 
     }
 
     .spotify-card {
 
-        padding: 20px;
+        padding: 18px;
 
     }
 
@@ -2044,53 +2105,15 @@ Non-destructive responsive overrides
 
     }
 
-    .mini-platform-card p {
-
-        font-size: 13px;
-
-        line-height: 1.7;
-
-    }
-
-    .section {
-
-        padding:
-        90px 20px;
-
-    }
-
-    .section-header {
-
-        margin-bottom: 44px;
-
-    }
-
-    .section-header h2 {
-
-        font-size:
-        clamp(34px, 10vw, 52px);
-
-        line-height: 1.08;
-
-    }
-
-    .section-label {
-
-        font-size: 11px;
-
-        letter-spacing: 1.5px;
-
-    }
-
+    .platform-card,
+    .project-card,
     .glass-card,
     .social-card,
-    .embed-card,
-    .project-card,
-    .platform-card {
+    .embed-card {
+
+        border-radius: 26px;
 
         padding: 24px;
-
-        border-radius: 28px;
 
     }
 
@@ -2101,14 +2124,9 @@ Non-destructive responsive overrides
 
     }
 
-    .platform-card p,
-    .project-card p,
-    .glass-card p,
-    .social-card p {
+    .platform-top {
 
-        font-size: 14px;
-
-        line-height: 1.8;
+        margin-bottom: 22px;
 
     }
 
@@ -2123,7 +2141,7 @@ Non-destructive responsive overrides
         width: 54px;
         height: 54px;
 
-        border-radius: 16px;
+        border-radius: 18px;
 
         font-size: 20px;
 
@@ -2131,9 +2149,7 @@ Non-destructive responsive overrides
 
     .project-tags {
 
-        gap: 8px;
-
-        margin-top: 24px;
+        margin-top: 22px;
 
     }
 
@@ -2149,7 +2165,7 @@ Non-destructive responsive overrides
 
         padding-left: 26px;
 
-        margin-left: 4px;
+        margin-left: 6px;
 
     }
 
@@ -2159,6 +2175,12 @@ Non-destructive responsive overrides
 
         width: 12px;
         height: 12px;
+
+    }
+
+    .terminal-card {
+
+        border-radius: 26px;
 
     }
 
@@ -2172,6 +2194,42 @@ Non-destructive responsive overrides
 
     }
 
+    .footer {
+
+        padding:
+        70px 5vw 40px;
+
+    }
+
+    .footer-description {
+
+        font-size: 14px;
+
+    }
+
+    .footer-links {
+
+        gap: 16px;
+
+    }
+
+    .footer-bottom {
+
+        font-size: 13px;
+
+    }
+
+    .page-blur {
+
+        width: 320px;
+        height: 320px;
+
+        filter: blur(90px);
+
+        opacity: 0.14;
+
+    }
+
     .release-banner {
 
         width: calc(100% - 24px);
@@ -2180,9 +2238,9 @@ Non-destructive responsive overrides
 
         padding: 18px;
 
-        gap: 20px;
-
         border-radius: 22px;
+
+        gap: 18px;
 
     }
 
@@ -2208,9 +2266,9 @@ Non-destructive responsive overrides
 
     .release-actions {
 
-        width: 100%;
-
         flex-direction: column;
+
+        width: 100%;
 
     }
 
@@ -2222,62 +2280,37 @@ Non-destructive responsive overrides
 
     }
 
-    .footer {
-
-        padding:
-        70px 20px 40px;
-
-    }
-
-    .footer-description {
-
-        font-size: 14px;
-
-    }
-
-    .footer-bottom {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 14px;
-
-    }
-
-    .page-blur {
-
-        width: 340px;
-        height: 340px;
-
-        filter: blur(90px);
-
-        opacity: 0.16;
-
-    }
-
 }
 
-/* ---------- SMALL MOBILE ---------- */
+/* =========================================
+SMALL MOBILE
+========================================= */
 
 @media (max-width: 480px) {
 
     .hero-inner {
 
-        padding-top: 100px;
+        padding:
+        92px 20px 50px;
+
+    }
+
+    .section {
+
+        padding:
+        80px 20px;
 
     }
 
     .hero h1 {
 
-        font-size:
-        clamp(42px, 15vw, 58px);
+        font-size: 42px;
 
     }
 
     .hero h2 {
 
-        font-size: 16px;
+        font-size: 17px;
 
     }
 
@@ -2290,7 +2323,8 @@ Non-destructive responsive overrides
     .platform-card,
     .project-card,
     .glass-card,
-    .social-card {
+    .social-card,
+    .embed-card {
 
         padding: 20px;
 
@@ -2303,9 +2337,26 @@ Non-destructive responsive overrides
 
     }
 
-    .platform-top i {
+    .platform-top i,
+    .social-card i {
 
         font-size: 28px;
+
+    }
+
+    .project-status {
+
+        font-size: 10px;
+
+        padding: 7px 10px;
+
+    }
+
+    .release-banner {
+
+        width: calc(100% - 16px);
+
+        padding: 16px;
 
     }
 
@@ -2314,19 +2365,6 @@ Non-destructive responsive overrides
         font-size: 10px;
 
         padding: 8px 12px;
-
-    }
-
-    .release-text h3 {
-
-        font-size: 15px;
-
-    }
-
-    .section {
-
-        padding:
-        80px 18px;
 
     }
 
